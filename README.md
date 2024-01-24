@@ -6,12 +6,22 @@
 
 ### Users and passwords
 
-<em>Passwords that are not in the docker-compose.yml file will be in the .env files within the same directory.</em>
+<em>Passwords that are not in the docker-compose.yml file will be in the .env file within the same directory.</em>
 
 ## - Network creation
 
 ```bash
 docker network create my-network
+```
+
+## - Docker creation
+
+```bash
+docker-compose up -d
+
+or
+
+docker-compose -f <docker-file-name>.yml up -d
 ```
 
 ## - Jenkins
