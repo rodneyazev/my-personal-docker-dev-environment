@@ -68,7 +68,7 @@ SID: XE  (Uppercase)
 
 Use host.docker.internal instead of localhost
 
-# Create a particular datase
+# Create a particular database
 
 Just modify the files/initdb.sql file for your need.
 ```
