@@ -67,6 +67,10 @@ SID: XE  (Uppercase)
 # PGAdmin (Local)
 
 Use host.docker.internal instead of localhost
+
+# Create a particular datase
+
+Just modify the files/initdb.sql file for your need.
 ```
 
 ## - RabbitMQ
