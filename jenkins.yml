@@ -11,15 +11,15 @@ services:
       # Exposing 8085 port for Spring application e.g.
       - "8085:8085"
     volumes:
-      - home:/var/jenkins_home
+      - jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/local/bin/docker:/usr/local/bin/docker
     restart: unless-stopped
     networks:
       - my-network
-volumes:
-  home:
 networks:
   my-network:
       name: my-network
       external: true
+volumes:
+  jenkins_home:

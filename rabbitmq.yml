@@ -13,8 +13,8 @@ services:
         # HTTP management UI
         - "15672:15672"
     volumes:
-        - data:/var/lib/rabbitmq
-        - log:/var/log/rabbitmq
+        - rabbitmq_data:/var/lib/rabbitmq
+        - rabbitmq_log:/var/log/rabbitmq
     networks:
       - my-network
 networks:
@@ -22,5 +22,5 @@ networks:
       name: my-network
       external: true
 volumes:
-  data:
-  log:
+  rabbitmq_data:
+  rabbitmq_log:

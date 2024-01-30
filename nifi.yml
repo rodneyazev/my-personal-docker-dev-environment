@@ -14,13 +14,13 @@ services:
       # SINGLE_USER_CREDENTIALS_USERNAME: admin
       # SINGLE_USER_CREDENTIALS_PASSWORD: admin
     volumes:
-      - database_repository:/opt/nifi/nifi-current/database_repository
-      - flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
-      - content_repository:/opt/nifi/nifi-current/content_repository
-      - provenance_repository:/opt/nifi/nifi-current/provenance_repository
-      - state:/opt/nifi/nifi-current/state
-      - logs:/opt/nifi/nifi-current/logs
-      - conf:/opt/nifi/nifi-current/conf
+      - nifi_database_repository:/opt/nifi/nifi-current/database_repository
+      - nifi_flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - nifi_content_repository:/opt/nifi/nifi-current/content_repository
+      - nifi_provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      - nifi_state:/opt/nifi/nifi-current/state
+      - nifi_logs:/opt/nifi/nifi-current/logs
+      - nifi_conf:/opt/nifi/nifi-current/conf
       # For PostgreSQL use. You can remove it.
       - ./lib/postgresql-42.5.1.jar:/opt/nifi/nifi-current/lib/postgresql-42.5.1.jar
       # For my personal ETL flow practice. You can remove it.
@@ -31,12 +31,11 @@ networks:
   my-network:
       name: my-network
       external: true
-
 volumes:
-  database_repository:
-  flowfile_repository:
-  content_repository:
-  provenance_repository:
-  state:
-  logs:
-  conf:
+  nifi_database_repository:
+  nifi_flowfile_repository:
+  nifi_content_repository:
+  nifi_provenance_repository:
+  nifi_state:
+  nifi_logs:
+  nifi_conf:
